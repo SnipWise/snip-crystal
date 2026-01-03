@@ -1,0 +1,168 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Idea intellij light theme",
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "workbench.tree.indent": 14,
+    //"workbench.activityBar.location": "top",
+    "workbench.editor.showTabs": "multiple",
+    "window.zoomLevel": 0.0,
+    "[markdown]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.fontWeight": "normal",
+        "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
+        "editor.fontSize": 14,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
+    },
+    "markdown.preview.fontSize": 14,
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+    },
+    "markdown.marp.html": "all"  ,
+    "[dockerfile]": {
+        "editor.fontSize": 14,
+    },
+    "[dockercompose]": {
+        "editor.fontSize": 14,
+    },
+    "[json]": {
+        "editor.fontSize": 14,
+    },
+    "[javascript]": {
+        "editor.fontSize": 14,
+    },    
+    "[yaml]": {
+        "editor.fontSize": 14,
+
+    },
+    "[go]": {
+        "editor.fontSize": 14,
+    },
+    "todohighlight.keywords": [ 
+        {
+            "text": "IMPORTANT:",
+            "color": "#ffffff",
+            "backgroundColor": "#EC1818",
+            "border": "1px solid #EC1818",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },        
+        {
+            "text": "STEP 1:",
+            "color": "#ffffff",
+            "backgroundColor": "#27A34F",
+            "border": "1px solid #27A34F",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "STEP 2:",
+            "color": "#ffffff",
+            "backgroundColor": "#2887C2",
+            "border": "1px solid #2887C2",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "STEP 3:",
+            "color": "#ffffff",
+            "backgroundColor": "#3330C4",
+            "border": "1px solid #3330C4",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "STEP 4:",
+            "color": "#ffffff",
+            "backgroundColor": "#7D30C4",
+            "border": "1px solid #7D30C4",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "STEP 5:",
+            "color": "#ffffff",
+            "backgroundColor": "#BA30C4",
+            "border": "1px solid #BA30C4",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+        {
+            "text": "STEP 6:",
+            "color": "#ffffff",
+            "backgroundColor": "#B91F5F",
+            "border": "1px solid #B91F5F",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },        
+        {
+            "text": "[TODO]",
+            "color": "#ffffff",
+            "backgroundColor": "#0F8E33",
+            "border": "1px solid #0F8E33",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        }, 
+        {
+            "text": "[QUESTION]",
+            "color": "#ffffff",
+            "backgroundColor": "#07220E",
+            "border": "1px solid #07220E",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },               
+        {
+            "text": "[IMPORTANT]",
+            "color": "#ffffff",
+            "backgroundColor": "#860909",
+            "border": "1px solid #860909",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        }, 
+        {
+            "text": "[NOTE]",
+            "color": "#ffffff",
+            "backgroundColor": "#336AB6",
+            "border": "1px solid #336AB6",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },   
+        {
+            "text": "[TOOLS]",
+            "color": "#ffffff",
+            "backgroundColor": "#4EBCE1",
+            "border": "1px solid #4EBCE1",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },           
+        {
+            "text": "[BEGIN]",
+            "color": "#ffffff",
+            "backgroundColor": "#000000",
+            "border": "1px solid #000000",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        }, 
+        {
+            "text": "[END]",
+            "color": "#ffffff",
+            "backgroundColor": "#000000",
+            "border": "1px solid #000000",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },  
+                                                                          
+    ]
+}

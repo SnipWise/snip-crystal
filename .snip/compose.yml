@@ -1,0 +1,82 @@
+services:
+  # docker compose up --build --no-log-prefix -d
+  # docker compose exec snip sh
+  # docker compose exec playground sh
+
+  snip:
+    image: k33g/snip:0.0.8
+
+    ports:
+    - 3500:8080
+    entrypoint: [./snip]
+
+    environment:
+      NOVA_LOG_LEVEL: INFO
+      #NOVA_LOG_LEVEL: DEBUG
+      STORE_PATH: ./store
+      DATA_PATH: ./data
+
+      HTTP_PORT: 8080
+
+      CODER_DIRECTIVES_PATH_FILE: ./directives/coder.agent.system.instructions.md
+      CODER_TEMPERATURE: 0.8
+      CODER_TOP_P: 0.9
+
+      CONTEXT_SIZE_LIMIT: 32000
+      SIMILARITY_LIMIT: 0.5
+      MAX_SIMILARITIES: 6
+
+      STORE_FILE: crystal.snippets.store.json
+      ENABLE_STORE_WATCH: true
+      STORE_WATCH_INTERVAL: 5      
+
+    volumes:
+      #- ./data:/app/data:rw
+      - ./directives:/app/directives:rw
+      - ./store:/app/store:rw
+
+    models:
+      rag-model:
+        endpoint_var: ENGINE_URL
+        model_var: RAG_EMBEDDING_MODEL_ID
+
+      metadata-model:
+        endpoint_var: ENGINE_URL
+        model_var: METADATA_MODEL_ID
+
+      compressor-model:
+        endpoint_var: ENGINE_URL
+        model_var: COMPRESSOR_MODEL_ID
+
+      coder-model:
+        endpoint_var: ENGINE_URL
+        model_var: CODER_MODEL_ID
+
+  playground:
+    build:
+      context: .
+      dockerfile: Dockerfile.playground
+    volumes:
+      - ../workspace:/workspace:rw
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+
+models:
+
+  rag-model:
+    model: ai/embeddinggemma:latest
+
+  metadata-model:
+    model: hf.co/menlo/jan-nano-gguf:q4_k_m
+
+  compressor-model:
+    #model: hf.co/menlo/jan-nano-128k-gguf:q4_k_m
+    model: ai/qwen2.5:3B-F16
+    context_size: 32768
+
+  coder-model:
+    model: hf.co/qwen/qwen2.5-coder-3b-instruct-gguf:q4_k_m
+    #model: hf.co/quantfactory/deepseek-coder-7b-instruct-v1.5-gguf:q4_k_m
+    context_size: 32768
+
