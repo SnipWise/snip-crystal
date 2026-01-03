@@ -1,5 +1,7 @@
 # SNIP Crystal
 
+> 🚧 This is a work in progress.
+
 > A project for learning Rust based on the SNIP project: https://github.com/SnipWise/snip
 
 ## Prerequisites
